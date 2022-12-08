@@ -84,8 +84,8 @@ def test_model(best_model,X_test,y_test,threshold):
 
     return performance_metrics(y_test,y_pred)
 
-best_sl_model=pickle.load(open('/models/supervised_models/best_dec_tree_model.pkl', 'rb'))
-best_ssl_model=pickle.load(open('/models/semi_supervised_models/best_label_prop_model_exptb.pkl', 'rb'))
+best_sl_model=pickle.load(open('best_models/best_dec_tree_model.pkl', 'rb'))
+best_ssl_model=pickle.load(open('best_modelsbest_label_prop_model_40.pkl', 'rb'))
 
 """# Decision Tree Classifier"""
 
