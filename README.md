@@ -3,8 +3,7 @@ The main.py file is used to run the best models from Supervised Learning and Sem
 
 ## Steps to run main.py file
 
-1) Use the command:
-`pip install -r requirements.txt`
+1) Use the command: `pip install -r requirements.txt`
 
 2) use the command `python3 main.py` to run the main.py file.
 
