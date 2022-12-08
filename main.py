@@ -18,8 +18,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
 
-X_test_final=np.loadtxt('\data\Test_data\X_test_final.csv',delimiter=",")
-y_test=np.loadtxt('\data\Test_data\y_test.csv',delimiter=",")
+X_test_final=np.loadtxt('./data/Test_data/X_test_final.csv',delimiter=",")
+y_test=np.loadtxt('./data/Test_data/y_test.csv',delimiter=",")
 
 
 
@@ -48,12 +48,13 @@ def performance_metrics(y,y_pred):
     '''
     
     conf=confusion_matrix(y, y_pred, labels = [0, 1])
-    colormap = sns.color_palette("Greens")
-    plt.figure(figsize=(6,6))  
-    sns.heatmap(conf, annot=True, fmt='g', cmap=colormap)
-    plt.xlabel('Predicted Label')
-    plt.ylabel('True Label')
-    plt.show()
+    #uncomment the below code to see a confusion matrix
+    # colormap = sns.color_palette("Greens")
+    # plt.figure(figsize=(6,6))  
+    # sns.heatmap(conf, annot=True, fmt='g', cmap=colormap)
+    # plt.xlabel('Predicted Label')
+    # plt.ylabel('True Label')
+    # plt.show()
     
     tn, fp, fn, tp = conf[0][0],conf[0][1],conf[1][0],conf[1][1]
     specificity = (tn / (tn+fp)).round(2)
@@ -84,8 +85,8 @@ def test_model(best_model,X_test,y_test,threshold):
 
     return performance_metrics(y_test,y_pred)
 
-best_sl_model=pickle.load(open('best_models/best_dec_tree_model.pkl', 'rb'))
-best_ssl_model=pickle.load(open('best_modelsbest_label_prop_model_40.pkl', 'rb'))
+best_sl_model=pickle.load(open('./best_models/best_dec_tree_model.pkl', 'rb'))
+best_ssl_model=pickle.load(open('./best_models/best_label_prop_model_40.pkl', 'rb'))
 
 """# Decision Tree Classifier"""
 
