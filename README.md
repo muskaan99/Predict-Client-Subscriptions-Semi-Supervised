@@ -6,7 +6,7 @@ The main.py file is used to run the best models from Supervised Learning and Sem
 1) Use the command:
 `pip install -r requirements.txt`
 
-2)use the command `python3 main.py` to run the main.py file.
+2) use the command `python3 main.py` to run the main.py file.
 
 
 The Bank_Marketing.ipynb file was written using the Colab IDE. It contains the Exploratory Data Analysis, training and testing codes.
